@@ -1,0 +1,17 @@
+{
+  "name": "venuscinema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json",
+    "watch": "sass --watch HomePage/style.scss HomePage/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Duong Ha",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.16.2",
+    "sass": "^1.26.12"
+  }
+}
