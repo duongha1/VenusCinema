@@ -1,0 +1,35 @@
+@import "variables";
+@import "btn";
+.containerNav {
+  background-image: linear-gradient(to bottom, #141414, #252525);
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+#navContainer {
+  position: relative;
+
+  .logo {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: auto;
+    z-index: 2;
+  }
+  .line {
+    background: linear-gradient(
+      to right,
+      rgba(128, 184, 65, 0) 0%,
+      rgba(128, 184, 65, 1) 40%,
+      rgba(128, 184, 65, 1) 60%,
+      rgba(128, 184, 65, 0) 100%
+    );
+    max-width: 650px;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

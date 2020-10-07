@@ -15,21 +15,38 @@ $(document).ready(function () {
       $(".navBtn").css("display", "block");
     }
   });
-
-  $(".owl-carousel").owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 3,
-      },
-      1000: {
-        items: 5,
-      },
-    },
-  });
+  btnMoviesStatus();
 });
+
+//------Element--------
+const slideWrapper = $("#slide-wrapper");
+const moviesSelection = $(".movies-selection");
+const btnGroup = $("#btn-group");
+const active = $("btn-active");
+
+const dbApi = "http://localhost:3000/slides";
+
+function start() {
+  getData((slides) => renderSlideShow(slides));
+}
+start();
+
+function getData(callback) {
+  fetch(dbApi)
+    .then((res) => res.json())
+    .then(callback);
+}
+
+function renderSlideShow(slides) {
+  slides.map((slide) => {
+    return slideWrapper.append(`
+    <div class="carousel-item" id="slide-${slide.id}">
+      <a href="#">
+        <img src="${slide.img}" class="d-block w-100" alt="movie">
+      </a>
+    </div>
+    `);
+  });
+  $("#slide-1").addClass("active");
+}
+function btnMoviesStatus() {}

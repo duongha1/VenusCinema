@@ -1,15 +1,7 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-/* ---------------------------------------NavBar--------------------------------------- */
-#navContainer {
-  position: relative;
-}
 .btn-primary-custom {
   display: block;
   float: left;
+  border: none;
   margin-right: 20px;
   background: #80b841;
   border-radius: 20px;
@@ -22,11 +14,62 @@
   outline: none;
   border: none;
 }
-.logo {
+
+.containerNav {
+  background-image: linear-gradient(to bottom, #141414, #252525);
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
+#navContainer {
+  position: relative;
+}
+#navContainer .logo {
   position: absolute;
-  top: 25%;
+  top: 17%;
   left: 50%;
   transform: translate(-50%, 0%);
   margin: auto;
+  z-index: 2;
 }
-/* ---------------------------------------Owl Carousel--------------------------------------- */
+#navContainer .line {
+  background: linear-gradient(to right, rgba(128, 184, 65, 0) 0%, #80b841 40%, #80b841 60%, rgba(128, 184, 65, 0) 100%);
+  max-width: 650px;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#owl-slide {
+  background-image: url("./asset/film-bg.png");
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+#owl-slide .movies-selection {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+#owl-slide .btn-active {
+  border: solid 2px #80b841;
+  display: block;
+  float: left;
+  margin-right: 20px;
+  background: transparent;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #80b841;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

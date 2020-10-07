@@ -1,0 +1,24 @@
+@import "variables";
+
+#owl-slide {
+  background-image: url("./asset/film-bg.png");
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  .movies-selection {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+  }
+  .btn-active {
+    border: solid 2px $primary-color;
+    display: block;
+    float: left;
+    margin-right: 20px;
+    background: transparent;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: $primary-color;
+    font-size: 16px;
+  }
+}
