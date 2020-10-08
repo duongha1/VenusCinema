@@ -15,14 +15,12 @@ $(document).ready(function () {
       $(".navBtn").css("display", "block");
     }
   });
-  btnMoviesStatus();
 });
 
 //------Element--------
 const slideWrapper = $("#slide-wrapper");
-const moviesSelection = $(".movies-selection");
-const btnGroup = $("#btn-group");
-const active = $("btn-active");
+// const moviesSelection = document.querySelector(".movies-selection");
+// const btnGroup = document.querySelector("#btn-group");
 
 const dbApi = "http://localhost:3000/slides";
 
@@ -30,7 +28,7 @@ function start() {
   getData((slides) => renderSlideShow(slides));
 }
 start();
-
+btnMoviesStatus();
 function getData(callback) {
   fetch(dbApi)
     .then((res) => res.json())
@@ -49,4 +47,15 @@ function renderSlideShow(slides) {
   });
   $("#slide-1").addClass("active");
 }
-function btnMoviesStatus() {}
+function btnMoviesStatus($this) {
+  //parameter is the current element that have event
+  const clicked = $this;
+  if (!clicked.classList.contains("btn-active")) {
+    clicked.classList.add("btn-active");
+    if (clicked.previousElementSibling) {
+      clicked.previousElementSibling.classList.remove("btn-active");
+    } else {
+      clicked.nextElementSibling.classList.remove("btn-active");
+    }
+  }
+}

@@ -96,8 +96,15 @@
       <!----------------------- Slide show carousel ---------------------->
       <section id="owl-slide">
         <div class="d-flex justify-content-center mt-5" id="btn-group">
-          <button class="movies-selection btn-active">Present Movies</button>
-          <button class="movies-selection">Up Coming</button>
+          <button
+            class="movies-selection btn-active"
+            onclick="btnMoviesStatus(this)"
+          >
+            Present Movies
+          </button>
+          <button class="movies-selection" onclick="btnMoviesStatus(this)">
+            Up Coming
+          </button>
         </div>
       </section>
     </main>
